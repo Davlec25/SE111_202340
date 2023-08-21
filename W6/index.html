@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payroll Calculator</title>
+</head>
+<body>
+
+<script>
+  var hourlyPay = Number(prompt("Please enter your hourly pay:"));
+  var hoursWorked = Number(prompt("Please enter the hours you worked in a two-week period:"));
+  var taxRate = 0.20;
+
+  var grossPay = hourlyPay * hoursWorked;
+  var uncleSamsShare = grossPay * taxRate;
+  var netPay = grossPay - uncleSamsShare;
+
+  var formattedGrossPay = grossPay.toFixed(2);
+  var formattedUncleSamsShare = uncleSamsShare.toFixed(2);
+  var formattedNetPay = netPay.toFixed(2);
+
+  var outputMessage = "Gross Pay: $" + formattedGrossPay + "\nUncle Sam's Share: $" + formattedUncleSamsShare + "\nNet Pay: $" + formattedNetPay;
+
+  alert(outputMessage);
+
+  console.log("Gross Pay: $" + formattedGrossPay);
+  console.log("Uncle Sam's Share: $" + formattedUncleSamsShare);
+  console.log("Net Pay: $" + formattedNetPay);
+</script>
+
+</body> 
+</html>
