@@ -1,31 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Payroll Calculator</title>
-</head>
+    <!-- Define the document's character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Metadata for the document -->
+    <meta name="author" content="David LeClair 202040">
+    <meta name="description" content="Week 6 JavaScript Pay Calculator">
+    
+    <!-- The title of the web page -->
+    <title>Week 6 | JavaScript Pay Calculator</title>
+</head> <!--closing header-->
 <body>
 
+<!-- JavaScript code block starts here -->
 <script>
+  // Prompt the user to enter their hourly pay and hours worked
   var hourlyPay = Number(prompt("Please enter your hourly pay:"));
   var hoursWorked = Number(prompt("Please enter the hours you worked in a two-week period:"));
+
+  // Define the tax rate as a constant
   var taxRate = 0.20;
 
+  // Calculate gross pay, Uncle Sam's share, and net pay
   var grossPay = hourlyPay * hoursWorked;
   var uncleSamsShare = grossPay * taxRate;
   var netPay = grossPay - uncleSamsShare;
 
+  // Format calculated values to two decimal places
   var formattedGrossPay = grossPay.toFixed(2);
   var formattedUncleSamsShare = uncleSamsShare.toFixed(2);
   var formattedNetPay = netPay.toFixed(2);
 
+  // Create a message with the formatted values
   var outputMessage = "Gross Pay: $" + formattedGrossPay + "\nUncle Sam's Share: $" + formattedUncleSamsShare + "\nNet Pay: $" + formattedNetPay;
 
+  // Display an alert to the user with the calculated pay information
   alert(outputMessage);
 
+  // Log the calculated pay information to the browser's console
   console.log("Gross Pay: $" + formattedGrossPay);
   console.log("Uncle Sam's Share: $" + formattedUncleSamsShare);
   console.log("Net Pay: $" + formattedNetPay);
 </script>
+<!-- JavaScript code block ends here -->
 
-</body> 
+</body> <!--closing body-->
 </html>
+
