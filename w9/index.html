@@ -24,33 +24,33 @@
     ]
 
     // Query Select the <body> tag and store it in a variable.
-    var bodyTag = document.querySelector("body");
+    var bodyTag = document.querySelector("body")
 
     // Loop through the array of objects
     for (var i = 0; i < people.length; i++) {
         // Declare a local variable called tempDiv;
         var tempDiv;
         // Create a new div using document.createElement() and store it in tempDiv.
-        tempDiv = document.createElement("div");
+        tempDiv = document.createElement("div")
         // Apply an id to each div using the incrementor as the id.
-        tempDiv.setAttribute("id", String(i));
+        tempDiv.setAttribute("id", String(i))
         // Give each div a class="border"
-        tempDiv.setAttribute("class", "border");
+        tempDiv.setAttribute("class", "border")
 
         // Use a for/in loop within the for loop to add each property of the object into the div.
         for (var prop in people[i]) {
             // Create a <p> element for each property in the object
-            var pTag = document.createElement("p");
+            var pTag = document.createElement("p")
             // Create a textNode for each <p> and use the value of each property for the text.
-            var textNode = document.createTextNode(prop + ": " + people[i][prop]);
+            var textNode = document.createTextNode(prop + ": " + people[i][prop])
             // Append the text node to the p tag
-            pTag.appendChild(textNode);
+            pTag.appendChild(textNode)
             // Append the <p> tag to the <div>
-            tempDiv.appendChild(pTag);
+            tempDiv.appendChild(pTag)
         }
 
         // Append the tempDiv to the body tag
-        bodyTag.appendChild(tempDiv);
+        bodyTag.appendChild(tempDiv)
     }
 </script>
 
