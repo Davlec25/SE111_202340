@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .dropdown {
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #b61313;
+            border-radius: 5px;
+            width: 200px;
+            background-color: #f4f4f4;
+        }
+        .dropdown:hover {
+            background-color: #e0e0e0;
+        }
+        .dropdown-content {
+            display: none;
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        .contact-info {
+            margin-bottom: 10px;
+        }
+        .contact-item {
+            cursor: pointer;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            background-color: #f9f9f9;
+            margin-bottom: 5px;
+        }
+        .contact-item:hover {
+            background-color: #eee;
+        }
+        .contact-details {
+            display: none;
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contacts</h1>
+
+    <!-- Sales Dropdown -->
+    <div class="dropdown" onclick="toggleDropdown('sales')">
+        Sales
+    </div>
+    <div id="sales" class="dropdown-content">
+        <div class="contact-info">
+            <div class="contact-item" onclick="toggleDetails('jaime')">Jaime Lannister</div>
+            <div id="jaime" class="contact-details">
+                <span>Phone: (555) 123-4567</span><br>
+                <span>Email: jaime.lannister@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('cersei')">Cersei Lannister</div>
+            <div id="cersei" class="contact-details">
+                <span>Phone: (555) 234-5678</span><br>
+                <span>Email: cersei.lannister@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('tyrion')">Tyrion Lannister</div>
+            <div id="tyrion" class="contact-details">
+                <span>Phone: (555) 345-6789</span><br>
+                <span>Email: tyrion.lannister@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('margaery')">Margaery Tyrell</div>
+            <div id="margaery" class="contact-details">
+                <span>Phone: (555) 456-7890</span><br>
+                <span>Email: margaery.tyrell@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('loras')">Loras Tyrell</div>
+            <div id="loras" class="contact-details">
+                <span>Phone: (555) 567-8901</span><br>
+                <span>Email: loras.tyrell@westeros.com</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Engineering Dropdown -->
+    <div class="dropdown" onclick="toggleDropdown('engineering')">
+        Engineering
+    </div>
+    <div id="engineering" class="dropdown-content">
+        <div class="contact-info">
+            <div class="contact-item" onclick="toggleDetails('robb')">Robb Stark</div>
+            <div id="robb" class="contact-details">
+                <span>Phone: (555) 678-9012</span><br>
+                <span>Email: robb.stark@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('arya')">Arya Stark</div>
+            <div id="arya" class="contact-details">
+                <span>Phone: (555) 789-0123</span><br>
+                <span>Email: arya.stark@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('jon')">Jon Snow</div>
+            <div id="jon" class="contact-details">
+                <span>Phone: (555) 890-1234</span><br>
+                <span>Email: jon.snow@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('sansa')">Sansa Stark</div>
+            <div id="sansa" class="contact-details">
+                <span>Phone: (555) 901-2345</span><br>
+                <span>Email: sansa.stark@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('benjen')">Benjen Stark</div>
+            <div id="benjen" class="contact-details">
+                <span>Phone: (555) 012-3456</span><br>
+                <span>Email: benjen.stark@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('catelyn')">Catelyn Stark</div>
+            <div id="catelyn" class="contact-details">
+                <span>Phone: (555) 123-4567</span><br>
+                <span>Email: catelyn.stark@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('bran')">Bran Stark</div>
+            <div id="bran" class="contact-details">
+                <span>Phone: (555) 234-5678</span><br>
+                <span>Email: bran.stark@westeros.com</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tech Dropdown -->
+    <div class="dropdown" onclick="toggleDropdown('tech')">
+        Tech
+    </div>
+    <div id="tech" class="dropdown-content">
+        <div class="contact-info">
+            <div class="contact-item" onclick="toggleDetails('daenerys')">Daenerys Targaryen</div>
+            <div id="daenerys" class="contact-details">
+                <span>Phone: (555) 345-6789</span><br>
+                <span>Email: daenerys.targaryen@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('rhaegar')">Rhaegar Targaryen</div>
+            <div id="rhaegar" class="contact-details">
+                <span>Phone: (555) 456-7890</span><br>
+                <span>Email: rhaegar.targaryen@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('aegon')">Aegon Targaryen</div>
+            <div id="aegon" class="contact-details">
+                <span>Phone: (555) 567-8901</span><br>
+                <span>Email: aegon.targaryen@westeros.com</span>
+            </div>
+
+            <div class="contact-item" onclick="toggleDetails('aerys')">Aerys Targaryen</div>
+            <div id="aerys" class="contact-details">
+                <span>Phone: (555) 678-9012</span><br>
+                <span>Email: aerys.targaryen@westeros.com</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(id) {
+            var dropdownContent = document.getElementById(id);
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        }
+
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
+    <div class="link-container">
+    <a href="Company information.html" class="contact-link">Company Information</a>
+    </div>
+</div>
+</body>
+</html>
